@@ -1,5 +1,4 @@
 #include <Ethernet.h>
-#define LED 8
 #define STEPS 150.0
 #define LED_RGB_R 3
 #define LED_RGB_G 5
@@ -40,10 +39,8 @@ int fromHexaCharToInt(char hexa) {
 }
 
 void setup() {
-  pinMode(LED, OUTPUT);
   Ethernet.begin(mac, ip);
   server.begin();
-  digitalWrite(LED, LOW);
   pinMode(LED_RGB_R, OUTPUT);
   pinMode(LED_RGB_G, OUTPUT);
   pinMode(LED_RGB_B, OUTPUT);
@@ -86,17 +83,7 @@ void loop() {
           client.println("HTTP/1.1 200 OK");
           client.println("Content-Type: text/html");
           client.println();
-          if (strncmp("GET /OnOff", requestInfo, 8) == 0) {
-            byte ledStatus = digitalRead(LED);
-            digitalWrite(LED, !ledStatus);
-            if (ledStatus == LOW) {
-              client.println("Turn OFF");
-            }
-            else {
-              client.println("Turn ON");
-            }
-          }
-          else if (strncmp("GET /LED-", requestInfo, 9) == 0) {
+          if (strncmp("GET /LED-", requestInfo, 9) == 0) {
             previousRed = red;
             previousGreen = green;
             previousBlue = blue;
