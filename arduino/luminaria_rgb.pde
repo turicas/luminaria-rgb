@@ -3,7 +3,7 @@
 #define LED_RGB_R 3
 #define LED_RGB_G 5
 #define LED_RGB_B 9
-#define LED_W 2
+#define LED_WHITE 2
 #define REQUEST_BUFFER_SIZE 20
 #define STEP_DELAY 10
 
@@ -44,11 +44,11 @@ void setup() {
   pinMode(LED_RGB_R, OUTPUT);
   pinMode(LED_RGB_G, OUTPUT);
   pinMode(LED_RGB_B, OUTPUT);
-  pinMode(LED_W, OUTPUT);  
+  pinMode(LED_WHITE, OUTPUT);  
   digitalWrite(LED_RGB_R, LOW);
   digitalWrite(LED_RGB_G, LOW);
   digitalWrite(LED_RGB_B, LOW);
-  digitalWrite(LED_W, LOW);
+  digitalWrite(LED_WHITE, LOW);
   //Serial.begin(9600);
 }
 
@@ -104,7 +104,7 @@ void loop() {
               int stepRed = (255 - previousRed) / STEPS;
               int stepGreen = (255 - previousGreen) / STEPS;
               int stepBlue = (255 - previousBlue) / STEPS;
-              digitalWrite(LED_W, LOW);
+              digitalWrite(LED_WHITE, LOW);
               for (int i = 0; i < STEPS; i++) {
                 previousRed += stepRed;
                 previousGreen += stepGreen;
@@ -114,7 +114,7 @@ void loop() {
                 analogWrite(LED_RGB_B, previousBlue);
                 delay(STEP_DELAY);
               }
-              digitalWrite(LED_W, HIGH);              
+              digitalWrite(LED_WHITE, HIGH);              
               digitalWrite(LED_RGB_R, 0);
               digitalWrite(LED_RGB_G, 0);
               digitalWrite(LED_RGB_B, 0);
@@ -123,7 +123,7 @@ void loop() {
               float stepRed = (red - previousRed) / STEPS;
               float stepGreen = (green - previousGreen) / STEPS;
               float stepBlue = (blue - previousBlue) / STEPS;
-              digitalWrite(LED_W, 0);
+              digitalWrite(LED_WHITE, 0);
               for (int i = 0; i < STEPS; i++) {
                 previousRed += stepRed;
                 previousGreen += stepGreen;
