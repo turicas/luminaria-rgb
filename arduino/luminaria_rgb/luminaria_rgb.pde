@@ -11,7 +11,7 @@
 
 
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
-byte ip[] = { 192, 168, 1, 111 };
+byte ip[] = { 192, 168, 10, 2 };
 char requestInfo[REQUEST_BUFFER_SIZE + 1];
 
 Server server(80);
