@@ -1,7 +1,6 @@
 #include <Ethernet.h>
 #define LED 8
 #define STEPS 150.0
-#define LED_RGB_COMMON 4
 #define LED_RGB_R 3
 #define LED_RGB_G 5
 #define LED_RGB_B 9
@@ -45,12 +44,10 @@ void setup() {
   Ethernet.begin(mac, ip);
   server.begin();
   digitalWrite(LED, LOW);
-  pinMode(LED_RGB_COMMON, OUTPUT);
   pinMode(LED_RGB_R, OUTPUT);
   pinMode(LED_RGB_G, OUTPUT);
   pinMode(LED_RGB_B, OUTPUT);
   pinMode(LED_W, OUTPUT);  
-  digitalWrite(LED_RGB_COMMON, LOW);
   digitalWrite(LED_RGB_R, LOW);
   digitalWrite(LED_RGB_G, LOW);
   digitalWrite(LED_RGB_B, LOW);
