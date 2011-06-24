@@ -9,9 +9,9 @@
 #define REQUEST_BUFFER_SIZE 25
 #define STEPS 150.0
 #define STEP_DELAY 10
-#define PRIVATE_DELAY 50
+#define PRIVATE_DELAY 15
 #define TUNZTUNZ_DELAY 50
-#define RANDOM_DELAY 50
+#define RANDOM_DELAY 10
 
 
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
