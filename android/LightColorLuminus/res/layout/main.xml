@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<TextView android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:text="@string/endereco" />
+	<EditText android:id="@+id/edit_text" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:text="192.168.1.111"
+		android:textSize="18sp" />
+	<TextView android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:text="@string/title" />
+	<Button android:id="@+id/button" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:text="@string/button_text" />
+	<Button android:id="@+id/button2" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:text="@string/button_text2" />
+	<Button android:id="@+id/button3" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:text="@string/button_text3" />
+	<Button android:id="@+id/button4" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:text="@string/button_text4" />
+	<Button android:id="@+id/button5" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:text="@string/button_text5" />
+	<TextView android:layout_width="fill_parent" android:id="@+id/status"
+		android:layout_height="wrap_content" android:text="Desligado" />
+</LinearLayout>

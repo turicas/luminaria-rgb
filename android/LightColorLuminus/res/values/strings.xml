@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title">Escolha o Modo</string>
+    <string name="app_name">Light</string>
+    <string name="endereco">Digite o endereço de Rede</string>
+    <string name="button_text">Cor Sólida</string>
+    <string name="button_text2">Momento Íntimo</string>
+    <string name="button_text3">Aleatório</string>
+    <string name="button_text4">Dance Music</string>
+    <string name="button_text5">Desligar</string>
+</resources>
